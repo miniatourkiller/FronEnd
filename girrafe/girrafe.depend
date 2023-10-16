@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1646060253 source:c:\users\user\desktop\girrafe\main.c
+	<stdio.h>
+	<stdlib.h>
+
