@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Box Model Example</title>
+ <style>
+ .box {
+ width: 200px;
+ height: 100px;
+ background-color: #3498db;
+ padding: 20px;
+ border: 5px solid #2980b9;
+ margin: 20px;
+ animation: blinky 2s infinite;
+ }
+ /* Additional styling for better visualization */
+ body {
+ text-align: center;
+ margin: 0;
+ padding: 0;
+ font-family: Arial, sans-serif;
+ }
+
+ @keyframes blinky {
+    0%{background-color: green;}
+    50%{background-color: red;}
+    100%{background-color: yellow;}
+ }
+ </style>
+</head>
+<body>
+ <div class="box">
+ <p>This is the content inside the box.</p>
+ </div>
+</body>
+</html>

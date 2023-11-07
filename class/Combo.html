@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My combination</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .nav{
+            position: relative;
+            height: 100px;
+            width: 100%;
+            background-color: rgb(46, 48, 47);
+            display: flex ;
+            justify-content: center;
+            align-items: center
+        }
+        .inline-element{
+            background-color: rgb(62, 63, 63);
+            padding: 40px;
+            text-decoration: none;
+            color: white;
+            margin: 2px;
+        }
+       .nav .block-element{
+            background-color: rgb(62, 63, 63);
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            margin: 2px;
+            display: none;
+        }
+        .grid-container{
+            width: 100%;
+            position: relative;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+        .box{
+            background-color: rgb(60, 47, 85);
+            text-align: center;
+            padding: 30px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .popular{
+            position: relative;
+            width: 100%;
+        }
+        
+        .popular .heading{
+            position: relative;
+            background-color: rgb(46, 48, 47);
+            text-align: center;
+            color: wheat;
+        }
+        .popular .body{
+            position: relative;
+        }
+
+        .popular-box{
+            height: 200px;
+            width: 300px;
+            float: left;
+            margin-left: 20px;
+            color: white;
+            text-align: center;
+            background-position: center;
+            background-size: cover;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 890px){
+           .nav{
+            display: block;
+           }
+           .inline-element{
+            background-color: rgb(62, 63, 63);
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            margin-top: 20px;
+            float: left;
+        }
+      
+
+        }
+        @media (max-width: 500px) {
+            .nav{
+                display: block;
+                height: 240px;
+            }
+           .inline-element{
+            display: none;
+           }
+         .nav  .block-element{
+            display: block;
+           }
+           .grid-container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .box{
+            padding: 10px;
+            font-size: 15px;
+        }
+        .popular-box{
+            width: 150px;
+            height: 120px;
+            font-size: 15px;
+        }
+        }
+
+        @keyframes bounce {
+            10%{
+                transform: scale(0.90);
+            }
+            50%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(0.90);
+            }
+        }
+        .inline-element:hover, .box:hover{
+            animation: bounce 2s infinite;
+        }
+        .popular-box:nth-child(1){
+            background-image:linear-gradient(rgba(3,5,45,0.5),rgba(3,5,45,0.1) ), url(/images/buy-2.jpg);
+        }
+        .popular-box:nth-child(2){
+            background-image:linear-gradient(rgba(3,5,45,0.5),rgba(3,5,45,0.1) ), url(/images/exclusive.png);
+        }
+        .popular-box:nth-child(3){
+            background-image:linear-gradient(rgba(3,5,45,0.5),rgba(3,5,45,0.1) ), url(/images/product-10.jpg);
+        }
+        .popular-box:nth-child(4){
+            background-image:linear-gradient(rgba(3,5,45,0.5),rgba(3,5,45,0.1) ), url(/images/product-8.jpg);
+        }
+        .popular-box:hover{
+            color: rgb(202, 195, 195);
+            transform: scale(0.95)
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a class="inline-element" href="">Home</a>
+        <a class="inline-element" href="">Search</a>
+        <a class="inline-element" href="">Shopify</a>
+        <a class="inline-element" href="">Contact us</a>
+        <a class="block-element" href="">Home</a>
+        <a class="block-element" href="">Search</a>
+        <a class="block-element" href="">Shopify</a>
+        <a class="block-element" href="">Contact us</a>
+    </div>
+    <div class="grid-container">
+        <div class="box">Kitchen accessories</div>
+        <div class="box">Board room accessories</div>
+        <div class="box">Gaming accessories</div>
+        <div class="box">Massage accessories</div>
+        <div class="box">Pets accessories</div>
+        <div class="box">Entertainment accessories</div>
+        <div class="box">Sleeping accessories</div>
+        <div class="box">Recreation accessories</div>
+        <div class="box">Technological accessories</div>
+    </div>
+    <div class="popular">
+        <div class="heading">
+            <h3 class="block-element">POPULAR</h3>
+        </div>
+        <div class="body">
+            <div class="popular-box">SHOES</div>
+            <div class="popular-box">SMART WATCH</div>
+            <div class="popular-box">SHOES</div>
+            <div class="popular-box">SMART WATCH</div>
+        </div>
+    </div>
+</body>
+</html>
